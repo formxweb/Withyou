@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>With You Coffee House — Çorum</title>
+<meta name="description" content="With You Coffee House, Çorum Çepni. Kendi hazırladığımız kruvasanlar, V60 ve espresso bazlı kahveler, soğuk içecekler. Her gün 12:00'den gece geç saate kadar açık.">
+<meta name="theme-color" content="#141311">
+<meta property="og:title" content="With You Coffee House — Kruvasan bizden, sohbet seninle.">
+<meta property="og:description" content="Çorum Çepni'de kendi kruvasanları, V60 ve espresso bazlı kahveleri olan bir kahve evi.">
+<meta property="og:image" content="assets/kahve.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141311'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='30' fill='%23F3E6CF'%3Ewy%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30;1,9..144,300..600,30&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,85..100,300..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"With You Coffee House","telephone":"+905316656359","image":"assets/kahve.webp",
+"address":{"@type":"PostalAddress","streetAddress":"Çepni Mah., Akşemseddin Cd. No:3/B","addressLocality":"Çorum","postalCode":"19040","addressCountry":"TR"},
+"servesCuisine":["Kahve","Kahvaltı","Pastane"],"openingHours":["Mo-Sa 12:00-02:00","Su 12:00-00:30"],
+"sameAs":["https://www.instagram.com/withyoucoffeehouse","https://linktr.ee/withyoucoffeehouse"]}
+</script>
+<style>
+:root{
+  --gece:#141311;     /* karanlık beton */
+  --beton:#1D1B18;
+  --beton-2:#262320;
+  --isik:#F3E6CF;     /* gün ışığı */
+  --golge:#A69D90;
+  --mango:#E9B23F;    /* soğuk içeceklerden: küçük vurgu */
+  --cizgi:rgba(243,230,207,.14);
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:min(1240px, 100% - 2*clamp(20px,5vw,60px));
+  --ease:cubic-bezier(.2,.7,.15,1);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--gece);color:var(--isik);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:var(--noise);opacity:.05;pointer-events:none;z-index:100;mix-blend-mode:overlay}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--mango);outline-offset:3px;border-radius:6px}
+.wrap{width:var(--wrap);margin-inline:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--isik);color:var(--gece);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+
+/* tipografi */
+.display{font-family:var(--serif);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 30;letter-spacing:-.035em;line-height:.92;margin:0}
+.h2{font-family:var(--serif);font-weight:320;font-variation-settings:"opsz" 144,"SOFT" 30;font-size:clamp(2.5rem,5.6vw,4.8rem);letter-spacing:-.03em;line-height:.98;margin:0}
+.h3{font-family:var(--serif);font-weight:400;font-variation-settings:"opsz" 60,"SOFT" 30;font-size:clamp(1.5rem,2.4vw,2.1rem);letter-spacing:-.015em;line-height:1.1;margin:0}
+.lead{font-size:clamp(1.08rem,1.4vw,1.25rem);line-height:1.55;color:rgba(243,230,207,.82);max-width:42ch}
+.muted{color:var(--golge)}
+
+/* butonlar */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 24px;border-radius:999px;border:1px solid var(--isik);font:inherit;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .2s,color .2s,border-color .2s,transform .2s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn--light{background:var(--isik);color:var(--gece)}
+.btn--light:hover{background:#fff}
+.btn--ghost{background:transparent;color:var(--isik);border-color:rgba(243,230,207,.38)}
+.btn--ghost:hover{border-color:var(--isik)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top);transition:background-color .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.is-solid{background:rgba(20,19,17,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--cizgi)}
+.nav__in{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.mark{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;line-height:1}
+.mark i{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.75rem;letter-spacing:-.02em;font-variation-settings:"opsz" 60,"SOFT" 100}
+.mark small{font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;margin-top:3px;color:var(--golge);padding-left:2px}
+.nav ul{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:500;color:rgba(243,230,207,.82)}
+.nav ul a:hover{color:var(--isik)}
+.nav .btn{min-height:42px;padding:0 18px;color:var(--gece)}
+
+/* hero: ışık huzmesi */
+.hero{position:relative;min-height:100svh;display:flex;overflow:hidden;isolation:isolate}
+.hero::after{content:"";position:absolute;inset:-20% -30%;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(112deg, transparent 34%, rgba(243,230,207,.08) 40%, rgba(243,230,207,.13) 46%, transparent 53%),
+    linear-gradient(112deg, transparent 58%, rgba(243,230,207,.05) 62%, rgba(243,230,207,.08) 65%, transparent 70%)}
+.js .hero::after{opacity:0;transform:translateX(-18%)}
+.is-ready .hero::after{opacity:1;transform:none;transition:opacity 1.8s ease, transform 2.4s var(--ease)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(32px,6vw,96px);width:var(--wrap);margin-inline:auto;padding:calc(72px + env(safe-area-inset-top) + 36px) 0 64px}
+.hero h1{font-size:clamp(3.6rem,8.4vw,8rem)}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .l > span{display:inline-block}
+.hero h1 .l--in{padding-left:.9em}
+.hero .lead{margin:30px 0 0}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.status{display:inline-flex;align-items:center;gap:10px;margin:24px 0 0;font-weight:500;color:rgba(243,230,207,.85)}
+.status i{width:9px;height:9px;border-radius:50%;background:#7BC48F;box-shadow:0 0 0 4px rgba(123,196,143,.16)}
+.status.closed i{background:#D9776A;box-shadow:0 0 0 4px rgba(217,119,106,.16)}
+.hero__photo{margin:0;position:relative;width:min(34vw,468px);aspect-ratio:468/630;overflow:hidden;border-radius:4px;box-shadow:0 50px 90px -40px rgba(0,0,0,.8)}
+.hero__photo img{width:100%;height:100%;object-fit:cover}
+.js .hero__photo{clip-path:inset(0 0 100% 0)}
+.is-ready .hero__photo{clip-path:inset(0);transition:clip-path 1.3s var(--ease) .15s}
+.js .hero h1 .l > span{transform:translateY(105%)}
+.is-ready .hero h1 .l > span{transform:none;transition:transform 1s var(--ease) .3s}
+.is-ready .hero h1 .l:nth-child(2) > span{transition-delay:.4s}
+.is-ready .hero h1 .l:nth-child(3) > span{transition-delay:.5s}
+@media (prefers-reduced-motion:reduce){.js .hero::after,.js .hero__photo,.js .hero h1 .l > span{opacity:1;transform:none;clip-path:none;transition:none!important}}
+
+/* bölümler */
+.section{padding-block:clamp(84px,11vw,150px)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px);margin-top:clamp(40px,6vw,72px);align-items:start}
+.gallery figure{margin:0}
+.gallery figure:nth-child(2){margin-top:clamp(40px,7vw,110px)}
+.gallery .ph{aspect-ratio:3/4;overflow:hidden;border-radius:4px;background:var(--beton)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{margin-top:16px}
+.gallery figcaption p{margin:6px 0 0;color:var(--golge);font-size:.98rem;max-width:32ch}
+.intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+.intro p{margin:0;color:var(--golge);max-width:40ch}
+
+.facts{margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--cizgi)}
+.fact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:clamp(26px,3.4vw,42px) 0;border-bottom:1px solid var(--cizgi);align-items:baseline}
+.fact p{margin:0;max-width:48ch;color:var(--golge)}
+
+/* menü */
+.menu{background:var(--beton);border-block:1px solid var(--cizgi)}
+.menu__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.menu__head p{margin:0;max-width:40ch;color:var(--golge)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);margin-top:clamp(40px,6vw,72px)}
+.col h3{padding-bottom:14px;border-bottom:1px solid var(--cizgi)}
+.col ul{list-style:none;margin:0;padding:0}
+.col li{padding:16px 0;border-bottom:1px solid rgba(243,230,207,.08)}
+.col li b{display:block;font-weight:600;font-size:1.08rem}
+.col li span{display:block;margin-top:2px;color:var(--golge);font-size:.95rem;line-height:1.45}
+.menu__order{margin-top:clamp(36px,5vw,56px);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.menu__order span{color:var(--golge);margin-right:6px}
+
+/* ziyaret */
+.visit__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.hours{margin-top:28px;border-top:1px solid var(--cizgi)}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(243,230,207,.08);font-variant-numeric:tabular-nums;color:rgba(243,230,207,.8)}
+.hours div.today{color:var(--isik);font-weight:600}
+.hours div.today span:first-child::after{content:"  bugün";font-weight:500;color:var(--mango);font-size:.9rem}
+.addr{font-style:normal}
+.addr .big{display:block;margin-top:24px;font-family:var(--serif);font-weight:340;font-variation-settings:"opsz" 96,"SOFT" 30;font-size:clamp(1.9rem,3.4vw,2.9rem);letter-spacing:-.02em;line-height:1.08}
+.addr p{margin:14px 0 0;color:var(--golge)}
+.visit__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.links{margin-top:30px;display:grid;gap:8px}
+.links a{text-decoration:none;color:rgba(243,230,207,.85);width:max-content}
+.links a:hover{color:var(--isik);text-decoration:underline;text-decoration-color:var(--mango);text-underline-offset:.25em}
+
+/* kapanış */
+.band{position:relative;overflow:hidden;padding-block:clamp(90px,12vw,170px);isolation:isolate}
+.band::after{content:"";position:absolute;inset:-30%;z-index:-1;background:linear-gradient(112deg,transparent 40%,rgba(243,230,207,.07) 48%,transparent 56%)}
+.band .display{font-size:clamp(3rem,8vw,7.4rem);max-width:12ch}
+.band p.lead{margin:24px 0 0}
+.band .btn{margin-top:28px}
+
+footer{border-top:1px solid var(--cizgi);padding:36px 0 calc(36px + env(safe-area-inset-bottom));font-size:.92rem;color:var(--golge)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* mobil bar */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;display:none;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;border-radius:999px;background:rgba(29,27,24,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--cizgi);transform:translateY(140%);transition:transform .4s var(--ease)}
+.dock.on{transform:none}
+.dock a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+.dock a svg{width:17px;height:17px}
+.dock a.p{background:var(--isik);color:var(--gece)}
+
+@media (max-width:900px){
+  .nav ul li:not(:last-child){display:none}
+  .hero{align-items:flex-end}
+  .hero__grid{grid-template-columns:1fr;gap:0;padding:0 0 36px}
+  .hero__photo{width:calc(100% + 2*clamp(20px,5vw,60px));margin-left:calc(-1*clamp(20px,5vw,60px));aspect-ratio:4/4.4;border-radius:0;box-shadow:none;order:-1}
+  .hero__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,.55) 0%,transparent 26%,transparent 60%,var(--gece) 100%)}
+  .hero h1{font-size:clamp(3rem,14.5vw,5.4rem);margin-top:-.5em;position:relative}
+  .intro,.fact,.visit__grid{grid-template-columns:1fr}
+  .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:clamp(20px,5vw,60px);margin-inline:calc(-1*clamp(20px,5vw,60px));padding:0 clamp(20px,5vw,60px) 6px;scrollbar-width:none}
+  .gallery::-webkit-scrollbar{display:none}
+  .gallery figure{flex:0 0 74%;scroll-snap-align:start}
+  .gallery figure:nth-child(2){margin-top:0}
+  .cols{grid-template-columns:1fr}
+  .dock{display:grid}
+  footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+}
+@media (max-width:420px){
+  .hero__cta{display:grid;grid-template-columns:1fr 1fr}
+  .hero__cta .btn{padding:0 12px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="mark" href="#top" aria-label="With You Coffee House ana sayfa"><i>with you</i><small>Coffee House</small></a>
+    <ul>
+      <li><a href="#menu">Menü</a></li>
+      <li><a href="#ziyaret">Saatler ve konum</a></li>
+      <li><a href="https://www.instagram.com/withyoucoffeehouse" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a class="btn btn--light" data-wa href="#" target="_blank" rel="noopener">WhatsApp'tan yaz</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="icerik">
+<section class="hero" id="top" aria-label="With You Coffee House">
+  <div class="hero__grid">
+    <div>
+      <h1 class="display" aria-label="Kruvasan bizden, sohbet seninle.">
+        <span class="l" aria-hidden="true"><span>Kruvasan bizden,</span></span>
+        <span class="l l--in" aria-hidden="true"><span>sohbet</span></span>
+        <span class="l" aria-hidden="true"><span>seninle.</span></span>
+      </h1>
+      <p class="lead">Çorum Çepni'de bir kahve evi. Kruvasanlarımızı kendimiz hazırlıyoruz; V60 ve espresso bazlı kahveler, soğuk içecekler ve kahvaltı.</p>
+      <div class="hero__cta">
+        <a class="btn btn--light" data-dir href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Yol tarifi al</a>
+        <a class="btn btn--ghost" href="#menu">Menüye bak</a>
+      </div>
+      <p class="status" id="status" aria-live="polite"><i aria-hidden="true"></i><span>Saatler yükleniyor</span></p>
+    </div>
+    <figure class="hero__photo"><img src="assets/kahve.webp" alt="Güneş ışığında, With You logolu bardak altlığının yanında kristal bardakta kahve" width="468" height="630"></figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="isik-baslik">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="h2" id="isik-baslik">Kapıdan girince ev gibi.</h2>
+      <p>Özenle seçilmiş çekirdekler, her gün hazırlanan kruvasanlar ve acelesi olmayan bir masa. Gerisi sohbet.</p>
+    </div>
+    <div class="gallery">
+      <figure><div class="ph"><img src="assets/cekirdek.webp" alt="Beton zeminde güneş ışığı altında kahve çekirdekleri" loading="lazy" width="469" height="602"></div><figcaption><h3 class="h3">Çekirdek</h3><p>Özenle seçilmiş çekirdekler; espressodan V60'a.</p></figcaption></figure>
+      <figure><div class="ph"><img src="assets/smoothie.webp" alt="With You logolu bardakta, kapaklı ve pipetli soğuk içecek" loading="lazy" width="466" height="624"></div><figcaption><h3 class="h3">Soğuk içecekler</h3><p>Sıcak günler ve uzun sohbetler için.</p></figcaption></figure>
+      <figure><div class="ph"><img src="assets/kahve.webp" alt="Kristal bardakta kahve ve With You bardak altlığı" loading="lazy" width="468" height="630"></div><figcaption><h3 class="h3">Kahve</h3><p>Sade içenlere de, sütlü sevenlere de.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="neden-baslik" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sr-only" id="neden-baslik">Neden With You</h2>
+    <div class="facts">
+      <div class="fact"><h3 class="h3">Kruvasanlar bizden</h3><p>Kruvasanlarımızı burada, kendimiz hazırlıyoruz. Sade de yiyebilirsin, kruvasan sandviç olarak da.</p></div>
+      <div class="fact"><h3 class="h3">Kahve, yöntemine göre</h3><p>Espresso bazlı kahveler, aromalı kahveler ve V60 ile demlenen filtre kahve.</p></div>
+      <div class="fact"><h3 class="h3">Öğlen kahvaltı, gece kahve</h3><p>Öğlen 12'de açıyoruz ve gece geç saate kadar buradayız. Kahvaltıyla gel, son kahveyle çık.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section menu" id="menu" aria-labelledby="menu-baslik">
+  <div class="wrap">
+    <div class="menu__head">
+      <h2 class="h2" id="menu-baslik">Menüden</h2>
+      <p>Masaya en çok gelenler. Menünün tamamı ve güncel fiyatlar kasada.</p>
+    </div>
+    <div class="cols">
+      <div class="col"><h3 class="h3">Kahve</h3><ul>
+        <li><b>V60</b><span>Elde demlenen filtre kahve.</span></li>
+        <li><b>Espresso bazlı kahveler</b><span>Espressodan sütlü kahvelere.</span></li>
+        <li><b>Aromalı kahveler</b><span>Tatlı bir şey isteyenlere.</span></li>
+      </ul></div>
+      <div class="col"><h3 class="h3">Kruvasan ve kahvaltı</h3><ul>
+        <li><b>Kruvasan</b><span>Kendi hazırladığımız, tereyağlı ve kat kat.</span></li>
+        <li><b>Kruvasan sandviç</b><span>Kahvenin yanına doyurucu bir şey.</span></li>
+        <li><b>Omlet ve kahvaltı</b><span>Öğlen başlayan güne.</span></li>
+      </ul></div>
+      <div class="col"><h3 class="h3">Soğuk ve tatlı</h3><ul>
+        <li><b>Soğuk içecekler</b><span>Buzlu kahveler ve meyveli soğuklar.</span></li>
+        <li><b>Brownie</b><span>Kahveyle en iyi giden.</span></li>
+        <li><b>Günün tatlısı</b><span>Vitrinde ne varsa, sor.</span></li>
+      </ul></div>
+    </div>
+    <div class="menu__order">
+      <span>Eve sipariş:</span>
+      <a class="btn btn--ghost" href="https://www.yemeksepeti.com/restaurant/yd6w/with-you-coffee-house-yd6w" target="_blank" rel="noopener">Yemeksepeti'nden sipariş ver</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ziyaret" aria-labelledby="ziyaret-baslik">
+  <div class="wrap visit__grid">
+    <div>
+      <h2 class="h2" id="ziyaret-baslik">Açık olduğumuz saatler</h2>
+      <div class="hours" id="hours"></div>
+    </div>
+    <div>
+      <h2 class="h2">Nerede?</h2>
+      <address class="addr">
+        <span class="big">Akşemseddin Caddesi No:3/B, Çepni, Çorum</span>
+        <p>Büyük Otel binasında, Akşemseddin Caddesi üzerinde.</p>
+      </address>
+      <div class="visit__cta">
+        <a class="btn btn--light" data-dir href="#" target="_blank" rel="noopener">Yol tarifi al</a>
+        <a class="btn btn--ghost" data-tel href="#">Ara: 0531 665 63 59</a>
+      </div>
+      <div class="links">
+        <a data-wa href="#" target="_blank" rel="noopener">WhatsApp'tan yaz</a>
+        <a href="https://www.instagram.com/withyoucoffeehouse" target="_blank" rel="noopener">Instagram: @withyoucoffeehouse</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Davet">
+  <div class="wrap">
+    <p class="display">Don't worry, be happy.</p>
+    <p class="lead">Bir kahve içelim mi? Seninle.</p>
+    <a class="btn btn--light" data-dir href="#" target="_blank" rel="noopener">Yol tarifi al</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>With You Coffee House, Çorum</span>
+    <span>Web sitesi: Aleyta Stüdyo</span>
+  </div>
+</footer>
+
+<nav class="dock" id="dock" aria-label="Hızlı işlemler">
+  <a data-tel href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Ara</a>
+  <a class="p" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a data-dir href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Yol tarifi</a>
+</nav>
+
+<script>
+/* İşletme bilgileri — tek yerden düzenlenir */
+const SITE = {
+  telefon: "+905316656359",
+  whatsapp: "905316656359",
+  waMesaj: "Merhaba With You, bilgi almak istiyorum.",
+  adres: "With You Coffee House, Akşemseddin Cd. No:3/B, Çepni, 19040 Çorum",
+  // [gün (0=Pazar), açılış, kapanış]; kapanış açılıştan küçükse ertesi güne sarkar
+  saatler: [[1,"12:00","02:00"],[2,"12:00","02:00"],[3,"12:00","02:00"],[4,"12:00","02:00"],[5,"12:00","02:00"],[6,"12:00","02:00"],[0,"12:00","00:30"]]
+};
+document.documentElement.classList.add("js");
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const q = encodeURIComponent(SITE.adres);
+$$("[data-tel]").forEach(a => a.href = "tel:" + SITE.telefon);
+$$("[data-wa]").forEach(a => a.href = "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(SITE.waMesaj));
+$$("[data-dir]").forEach(a => a.href = "https://www.google.com/maps/dir/?api=1&destination=" + q);
+
+(function(){
+  const gunler = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"], sira = [1,2,3,4,5,6,0];
+  const tr = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Istanbul",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  const wd = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[tr.find(p=>p.type==="weekday").value];
+  const now = (+tr.find(p=>p.type==="hour").value % 24) * 60 + +tr.find(p=>p.type==="minute").value;
+  const m = t => { const [h,mm] = t.split(":").map(Number); return h*60+mm; };
+  const by = {}; SITE.saatler.forEach(([d,o,c]) => by[d] = [o,c]);
+  $("#hours").innerHTML = sira.map(d => by[d] ? `<div class="${d===wd?"today":""}"><span>${gunler[d]}</span><span>${by[d][0]} – ${by[d][1]}</span></div>` : `<div><span>${gunler[d]}</span><span>Kapalı</span></div>`).join("");
+  let acik = false, kapanis = "";
+  const bugun = by[wd], dun = by[(wd + 6) % 7];
+  if (bugun) { const o = m(bugun[0]); let c = m(bugun[1]); if (c <= o) c += 1440; if (now >= o && now < c) { acik = true; kapanis = bugun[1]; } }
+  if (!acik && dun) { const o = m(dun[0]), c = m(dun[1]); if (c <= o && now < c) { acik = true; kapanis = dun[1]; } }
+  const st = $("#status"), sp = st.querySelector("span");
+  if (acik) sp.textContent = `Şu an açığız, kapanış ${kapanis}`;
+  else { st.classList.add("closed"); sp.textContent = bugun && now < m(bugun[0]) ? `Şu an kapalı, bugün ${bugun[0]}'de açıyoruz` : "Şu an kapalı"; }
+})();
+
+const nav = $("#nav"); const onS = () => nav.classList.toggle("is-solid", scrollY > 30); onS(); addEventListener("scroll", onS, {passive:true});
+requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add("is-ready")));
+new IntersectionObserver(([e]) => $("#dock").classList.toggle("on", !e.isIntersecting), {threshold:.12}).observe($(".hero"));
+</script>
+</body>
+</html>
