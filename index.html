@@ -227,7 +227,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap nav__in">
     <a class="mark" href="#top" aria-label="With You Coffee House ana sayfa"><i>with you</i><small>Coffee House</small></a>
     <ul>
-      <li><a href="#menu">Menü</a></li>
+      <li><a href="/menu/">Menü</a></li>
       <li><a href="#cekirdek">Çekirdek</a></li>
       <li><a href="#rezervasyon">Masa ayırt</a></li>
       <li><a href="#ziyaret">Saatler ve konum</a></li>
@@ -299,8 +299,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="tabs" role="tablist" aria-label="Menü kategorileri" id="tabs"></div>
     <div id="panels"></div>
     <div class="menu__foot">
+      <a class="btn btn--ink" href="/menu/">Fotoğraflı menüyü aç</a>
       <a class="btn btn--line" href="https://www.yemeksepeti.com/restaurant/yd6w/with-you-coffee-house-yd6w" target="_blank" rel="noopener">Yemeksepeti'nden sipariş ver</a>
-      <p>Eve paket sipariş için.</p>
     </div>
   </div>
 </section>
@@ -370,6 +370,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <a data-dir href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Yol tarifi</a>
 </nav>
 
+<script src="assets/menu-data.js"></script>
 <script>
 /* İşletme bilgileri — tek yerden düzenlenir */
 const SITE = {
@@ -381,38 +382,8 @@ const SITE = {
   saatler: [[1,"12:00","02:00"],[2,"12:00","02:00"],[3,"12:00","02:00"],[4,"12:00","02:00"],[5,"12:00","02:00"],[6,"12:00","02:00"],[0,"12:00","00:30"]],
   fiyatGoster: false   // fiyatlar işletmeyle doğrulanınca true yapılır
 };
-/* Menü: işletmenin Yemeksepeti menüsünden (Kasım 2026). Fiyatlar Yemeksepeti liste fiyatı, TL. */
-const MENU = [
-  ["Sıcak kahveler", [
-    ["With You Latte","Espresso, süt, kurabiye şurubu, süt kreması",195],["Cafe Miel","Espresso, süt, tereyağı, bal",210],
-    ["Latte","Single espresso, süt, süt kreması",185],["Cappuccino","Espresso, süt, süt köpüğü",200],["Flat White","Double espresso, süt",190],
-    ["Cortado","Espresso, az sıcak süt",175],["Americano","Double espresso, sıcak su",175],["Red Eye","Filtre kahve, espresso",205],
-    ["Espresso","Motion espresso çekirdeği",115],["Double Espresso","Motion 18 gr espresso çekirdeği",130],
-    ["White Chocolate Mocha","Espresso, beyaz çikolata sos, süt",220],["Salted Caramel Latte","Espresso, tuzlu karamel sos, süt, krema",195],
-    ["Salepresso","Salep, espresso",205],["Affogato","Vanilyalı dondurma üzerine sıcak espresso",210]]],
-  ["Soğuk kahveler", [
-    ["Iced With You Latte","Latte, kurabiye şurubu",200],["Espresso Chips Speculoos","Lotus bisküvisi, karamel, buz, kahve çekirdekleri",250],
-    ["Iced Americano","18 gr double espresso, buz, su",180],["Iced Coffee Latte","Espresso, süt, buz, süt kreması",190],
-    ["Iced Salted Caramel Latte","Latte, salted karamel şurubu",200],["Iced White Chocolate Mocha","Espresso, buz, süt, beyaz çikolata sosu",225]]],
-  ["Demleme", [
-    ["V60","Sıcak servis edilir",200],["Kalita","Sıcak servis edilir",200],["Aeropress","Sıcak servis edilir",200],["Delter Press","Sıcak servis edilir",200]]],
-  ["Kruvasan ve tost", [
-    ["Withella Kruvasan","Nutella, muz, çilek, dilim fıstık",365],["Lotus With Kruvasan","Biscoff Lotus kreması, Lotus Biscoff, muz",365],
-    ["Magnum With Kruvasan","Bademli Magnum",400],["Füme With Kruvasan","Üç peynirli fesleğenli sos, marul, füme et",325],
-    ["Flat With Kruvasan","Üç peynirli fesleğenli sos, yeşillik",320],["Egg With Kruvasan","Scrambled yumurta, frenk soğanı",325],
-    ["Sade Kruvasan","Tereyağlı sade kruvasan",210],["Pestolum Tost","Ekşi mayalı ekmek; pesto, kaşar, sucuk, çırpılmış yumurta",300],
-    ["Kaşarlım Tost","Ekşi mayalı ekmek, kaşar peyniri",215]]],
-  ["Tatlılar", [
-    ["Tiramisu","Espresso, mascarpone, Etiyopya kakao",265],["Üç Çikolatalı Brownie","Sütlü, bitter, beyaz çikolata",280],
-    ["Sufle","Adet olarak servis edilir",235],["Ballı Cevizli Marlenka","Ballı, cevizli medovik",245],["Çikolatalı Marlenka","Çikolatalı medovik",245]]],
-  ["Sıcak içecekler", [
-    ["Golden Milk Tea","Zerdeçal, vanilya çubuğu, zencefil, karabiber, tarçın",205],["Chai Tea Latte","Kakule, siyah çay, tarçın, süt",195],
-    ["Hot Chocolate","Sıcak servis edilir",195],["Hot White Chocolate","Beyaz çikolata, süt",195],["Ballı Süt","Datça çiçek balı, süt",145],["Çay","Sıcak servis edilir",75]]],
-  ["Soğuk içecekler", [
-    ["Cooler With","Portakal kabuğu, şeker şurubu, limonata, Sprite",215],["Mojito","Alkolsüz; naneli, çilekli ve çarkıfelekli",205],
-    ["Çilekli Frozen","Soğuk servis edilir",215],["Çikolatalı Milkshake","Çikolata sos, dondurma, süt",205],["Taze Sıkma Portakal Suyu","Soğuk servis edilir",175],
-    ["Limonata","Limon suyu, şeker",165],["Çilekli Limonata","Çilek dilimleri, limonata",185],["Churchill","Sade soda, limon, tuz",125]]]
-];
+/* Menü verisi tek yerde: assets/menu-data.js (QR menü de aynı dosyayı kullanır) */
+const MENU = (window.WY_MENU || []).map(c => [c.ad, c.urunler.map(u => [u.ad, u.acik, u.fiyat])]);
 
 document.documentElement.classList.add("js");
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];

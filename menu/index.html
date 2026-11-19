@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menü — With You Coffee House</title>
+<meta name="description" content="With You Coffee House fotoğraflı menü: kahveler, demleme, kruvasan ve tostlar, tatlılar, içecekler.">
+<meta name="theme-color" content="#E6E2DB">
+<meta property="og:title" content="With You Coffee House — Menü">
+<meta property="og:image" content="/assets/menu/with-you-latte-l.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191715'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='30' fill='%23E6E2DB'%3Ewy%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30;1,9..144,300..600,30;1,9..144,300..600,100&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,85..100,300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tas:#E6E2DB; --tas-2:#DAD5CC; --kagit:#F1EEE8; --murekkep:#191715; --gri:#5C564E;
+  --cizgi:rgba(25,23,21,.15); --mango:#C98A12;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gut:clamp(16px,4.5vw,40px);
+  --wrap:min(1120px, 100% - 2*var(--gut));
+  --bar:60px;
+  --ease:cubic-bezier(.2,.7,.15,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--tas);color:var(--murekkep);font-family:var(--sans);font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--murekkep);outline-offset:3px;border-radius:8px}
+.wrap{width:var(--wrap);margin-inline:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* üst */
+.top{position:relative;overflow:hidden;isolation:isolate;padding:calc(18px + env(safe-area-inset-top)) 0 22px}
+.top::after{content:"";position:absolute;inset:-40% -60%;z-index:-1;pointer-events:none;filter:blur(18px);
+  background:repeating-linear-gradient(115deg,transparent 0 120px,rgba(25,23,21,.07) 120px 190px,transparent 190px 360px)}
+.mark{display:inline-flex;flex-direction:column;text-decoration:none;line-height:1}
+.mark i{font-family:var(--serif);font-style:italic;font-weight:420;font-size:1.6rem;letter-spacing:-.02em;font-variation-settings:"opsz" 60,"SOFT" 100}
+.mark small{font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;margin-top:3px;color:var(--gri);padding-left:2px}
+.top h1{margin:26px 0 0;font-family:var(--serif);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 30;font-size:clamp(3.4rem,16vw,6.4rem);letter-spacing:-.04em;line-height:.9}
+.status{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-weight:500;font-size:.95rem}
+.status i{width:8px;height:8px;border-radius:50%;background:#2F8A4E;box-shadow:0 0 0 4px rgba(47,138,78,.15);flex:none}
+.status.closed i{background:#B54A3A;box-shadow:0 0 0 4px rgba(181,74,58,.14)}
+
+/* yapışkan kategori çubuğu */
+.bar{position:sticky;top:0;z-index:30;background:rgba(230,226,219,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--cizgi);padding-top:env(safe-area-inset-top)}
+.bar__in{height:var(--bar);display:flex;align-items:center;gap:8px}
+.iconbtn{flex:none;width:44px;height:44px;border-radius:999px;border:1px solid var(--cizgi);background:var(--kagit);display:grid;place-items:center;cursor:pointer}
+.iconbtn svg{width:19px;height:19px}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth;margin-right:calc(-1*var(--gut));padding-right:var(--gut);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;min-height:40px;padding:0 15px;border-radius:999px;text-decoration:none;font-weight:550;font-size:.92rem;white-space:nowrap;color:var(--gri);transition:background-color .2s,color .2s}
+.chip[aria-current="true"]{background:var(--murekkep);color:var(--kagit)}
+.search{display:none;flex:1;align-items:center;gap:8px}
+.bar.is-search .chips{display:none}
+.bar.is-search .search{display:flex}
+.bar.is-search #araAc{display:none}
+.search input{flex:1;min-width:0;height:44px;border-radius:999px;border:1px solid rgba(25,23,21,.25);background:var(--kagit);padding:0 16px;font:inherit;color:var(--murekkep)}
+.search input:focus{outline:none;border-color:var(--murekkep);box-shadow:0 0 0 3px rgba(25,23,21,.1)}
+.search button{flex:none;background:none;border:0;font-weight:600;padding:0 6px;min-height:44px;cursor:pointer}
+
+/* kategoriler */
+.cat{padding:30px 0 10px;scroll-margin-top:calc(var(--bar) + env(safe-area-inset-top) + 4px)}
+.cat__head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px}
+.cat h2{margin:0;font-family:var(--serif);font-weight:340;font-variation-settings:"opsz" 96,"SOFT" 30;font-size:clamp(1.9rem,6.4vw,2.6rem);letter-spacing:-.025em;line-height:1}
+.cat__n{color:var(--gri);font-size:.88rem;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px;align-items:start}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}}
+@media (min-width:980px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{display:block;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.card__img{display:block;position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:#2a2622}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+@media (hover:hover){.card:hover .card__img img{transform:scale(1.035)}}
+.card:active .card__img img{transform:scale(.985)}
+.tag{position:absolute;left:8px;top:8px;padding:4px 9px;border-radius:999px;background:var(--tas);color:var(--murekkep);font-size:.72rem;font-weight:600;line-height:1.3}
+.card b{display:block;margin-top:10px;font-family:var(--serif);font-weight:450;font-variation-settings:"opsz" 30;font-size:1.06rem;letter-spacing:-.01em;line-height:1.2}
+.card span.d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;color:var(--gri);font-size:.84rem;line-height:1.4}
+.price{display:block;margin-top:6px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* fotoğrafsız ürünler: noktalı satır */
+.rows{margin-top:22px;border-top:1px solid var(--murekkep)}
+.grid:empty + .rows{margin-top:0}
+.row{padding:14px 0;border-bottom:1px solid var(--cizgi)}
+.row__l{display:flex;align-items:baseline;gap:8px}
+.row__l b{font-family:var(--serif);font-weight:450;font-size:1.06rem;letter-spacing:-.01em;line-height:1.25}
+.row__l i{flex:1;min-width:16px;border-bottom:1.5px dotted rgba(25,23,21,.35);transform:translateY(-4px)}
+.row__l .price{margin:0;white-space:nowrap}
+.row p{margin:3px 0 0;color:var(--gri);font-size:.86rem;line-height:1.4}
+
+.empty{padding:48px 0 24px}
+.empty p{margin:0 0 16px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:0 20px;border-radius:999px;border:1px solid var(--murekkep);background:none;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn--ink{background:var(--murekkep);color:var(--kagit)}
+
+/* alt */
+.foot{margin-top:40px;padding:36px 0 calc(36px + env(safe-area-inset-bottom));background:var(--murekkep);color:var(--tas)}
+.foot .say{margin:0;font-family:var(--serif);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 30;font-size:clamp(2.1rem,8vw,3.4rem);letter-spacing:-.03em;line-height:1}
+.foot .note{margin:14px 0 0;color:rgba(230,226,219,.7);font-size:.92rem}
+.foot__links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.foot .btn{border-color:rgba(230,226,219,.35);color:var(--tas)}
+.foot .btn--ink{background:var(--tas);color:var(--murekkep);border-color:var(--tas)}
+.foot small{display:block;margin-top:26px;color:rgba(230,226,219,.5);font-size:.82rem}
+
+/* ürün detayı */
+dialog.sheet{border:0;padding:0;margin:auto auto 0;width:100%;max-width:560px;max-height:92svh;background:var(--kagit);color:var(--murekkep);border-radius:22px 22px 0 0;overflow:auto;overscroll-behavior:contain}
+@media (min-width:640px){dialog.sheet{margin:auto;border-radius:22px;max-height:88svh}}
+dialog.sheet::backdrop{background:rgba(25,23,21,.55)}
+dialog.sheet[open]{animation:up .38s var(--ease)}
+@keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){dialog.sheet[open]{animation:none}.card__img img{transition:none}}
+.sheet__img{position:relative;aspect-ratio:1/1;background:#2a2622 center/cover}
+.sheet__img img{width:100%;height:100%;object-fit:cover}
+.sheet__x{position:absolute;right:12px;top:12px;width:44px;height:44px;border-radius:999px;border:0;background:rgba(241,238,232,.92);display:grid;place-items:center;cursor:pointer}
+.sheet__x svg{width:18px;height:18px}
+.sheet__body{padding:22px 22px calc(26px + env(safe-area-inset-bottom))}
+.sheet__body .tag{position:static;display:inline-block;margin-bottom:10px;background:var(--murekkep);color:var(--kagit)}
+.sheet h3{margin:0;font-family:var(--serif);font-weight:380;font-variation-settings:"opsz" 96,"SOFT" 30;font-size:2rem;letter-spacing:-.02em;line-height:1.05}
+.sheet p{margin:10px 0 0;color:var(--gri);font-size:1rem}
+.sheet .price{margin-top:14px;font-size:1.25rem}
+.sheet__close{margin-top:22px;width:100%}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="With You Coffee House web sitesi"><i>with you</i><small>Coffee House</small></a>
+    <h1>Menü</h1>
+    <p class="status" id="status" aria-live="polite"><i aria-hidden="true"></i><span>Saatler yükleniyor</span></p>
+  </div>
+</header>
+
+<nav class="bar" id="bar" aria-label="Menü kategorileri">
+  <div class="wrap bar__in">
+    <button class="iconbtn" id="araAc" type="button" aria-label="Menüde ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+    <div class="chips" id="chips"></div>
+    <div class="search" role="search">
+      <label class="sr-only" for="ara">Menüde ara</label>
+      <input id="ara" type="search" placeholder="Ürün ara: latte, kruvasan…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="araKapat">Vazgeç</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="liste"></main>
+<div class="wrap empty" id="bos" hidden>
+  <p id="bosYazi"></p>
+  <button class="btn" type="button" id="bosTemizle">Aramayı temizle</button>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="say">Don't worry, be happy.</p>
+    <p class="note">Alerjen ya da içerik sorusu için bize sorabilirsin.</p>
+    <div class="foot__links">
+      <a class="btn btn--ink" href="https://www.instagram.com/withyoucoffeehouse" target="_blank" rel="noopener">Instagram'da takip et</a>
+      <a class="btn" id="yol" href="#" target="_blank" rel="noopener">Yol tarifi</a>
+      <a class="btn" href="/">Web sitemiz</a>
+    </div>
+    <small>With You Coffee House, Akşemseddin Cd. No:3/B, Çepni, Çorum<br>Web sitesi: Aleyta Stüdyo</small>
+  </div>
+</footer>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetAd">
+  <div class="sheet__img" id="sheetImgWrap">
+    <img id="sheetImg" alt="" width="800" height="800">
+    <button class="sheet__x" type="button" data-kapat aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="sheet__body">
+    <span class="tag" id="sheetTag" hidden>With You'ya özel</span>
+    <h3 id="sheetAd"></h3>
+    <p id="sheetAcik"></p>
+    <span class="price" id="sheetFiyat"></span>
+    <button class="btn btn--ink sheet__close" type="button" data-kapat>Menüye dön</button>
+  </div>
+</dialog>
+
+<script src="/assets/menu-data.js"></script>
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const MENU = window.WY_MENU, FIYAT = window.WY_FIYAT_GOSTER;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tl = n => n.toLocaleString("tr-TR") + " ₺";
+const img = (s, b) => `/assets/menu/${s}-${b}.webp`;
+$("#yol").href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent("With You Coffee House, Akşemseddin Cd. No:3/B, Çepni, 19040 Çorum");
+
+/* listeyi çiz */
+const ALL = [];
+let ilk = 0;
+$("#chips").innerHTML = MENU.map(c => `<a class="chip" href="#${c.k}" data-k="${c.k}">${esc(c.ad)}</a>`).join("");
+$("#liste").innerHTML = MENU.map(c => {
+  const foto = c.urunler.filter(u => u.img), sade = c.urunler.filter(u => !u.img);
+  const kart = u => { const i = ALL.push(u) - 1; const eager = ilk++ < 4;
+    return `<button class="card" type="button" data-i="${i}">
+      <span class="card__img"><img src="${img(u.img,"s")}" alt="" width="440" height="440" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async">${u.ozel?'<span class="tag">With You\'ya özel</span>':""}</span>
+      <b>${esc(u.ad)}</b><span class="d">${esc(u.acik)}</span>${FIYAT?`<span class="price">${tl(u.fiyat)}</span>`:""}</button>`; };
+  const satir = u => { const i = ALL.push(u) - 1;
+    return `<div class="row" data-i="${i}"><div class="row__l"><b>${esc(u.ad)}</b>${FIYAT?`<i aria-hidden="true"></i><span class="price">${tl(u.fiyat)}</span>`:""}</div><p>${esc(u.acik)}</p></div>`; };
+  return `<section class="cat" id="${c.k}" aria-labelledby="h-${c.k}">
+    <div class="cat__head"><h2 id="h-${c.k}">${esc(c.ad)}</h2><span class="cat__n">${c.urunler.length} ürün</span></div>
+    <div class="grid">${foto.map(kart).join("")}</div>${sade.length?`<div class="rows">${sade.map(satir).join("")}</div>`:""}
+  </section>`;
+}).join("");
+
+/* kategori çubuğu: aktif kategori */
+const chips = $("#chips"), chipEls = $$(".chip");
+const aktif = k => chipEls.forEach(ch => { const on = ch.dataset.k === k; ch.setAttribute("aria-current", on); if (on) chips.scrollTo({left: ch.offsetLeft - chips.offsetLeft - 8, behavior: "smooth"}); });
+let sonK = null;
+const spy = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting && e.target.id !== sonK) { sonK = e.target.id; aktif(sonK); } }); }, {rootMargin: "-40% 0px -55% 0px"});
+$$(".cat").forEach(s => spy.observe(s));
+aktif(MENU[0].k);
+
+/* ürün detayı */
+const sheet = $("#sheet");
+function ac(u) {
+  const w = $("#sheetImgWrap"), im = $("#sheetImg");
+  w.hidden = !u.img;
+  if (u.img) { w.style.backgroundImage = `url(${img(u.img,"s")})`; im.src = img(u.img,"l"); im.alt = u.ad; }
+  $("#sheetTag").hidden = !u.ozel; $("#sheetAd").textContent = u.ad; $("#sheetAcik").textContent = u.acik;
+  $("#sheetFiyat").textContent = FIYAT ? tl(u.fiyat) : ""; $("#sheetFiyat").hidden = !FIYAT;
+  sheet.showModal(); history.pushState({wySheet: true}, "");
+}
+function kapat() { if (history.state && history.state.wySheet) history.back(); else if (sheet.open) sheet.close(); }
+addEventListener("popstate", () => { if (sheet.open) sheet.close(); });
+sheet.addEventListener("cancel", e => { e.preventDefault(); kapat(); });
+sheet.addEventListener("click", e => { if (e.target === sheet || e.target.closest("[data-kapat]")) kapat(); });
+$("#liste").addEventListener("click", e => { const c = e.target.closest(".card"); if (c) ac(ALL[+c.dataset.i]); });
+
+/* arama */
+const bar = $("#bar"), ara = $("#ara");
+const norm = s => s.toLocaleLowerCase("tr").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ı/g, "i");
+function filtrele() {
+  const q = norm(ara.value.trim()); let toplam = 0;
+  $$(".cat").forEach(sec => { let n = 0;
+    sec.querySelectorAll("[data-i]").forEach(el => { const u = ALL[+el.dataset.i]; const ok = !q || norm(u.ad + " " + u.acik).includes(q); el.hidden = !ok; if (ok) n++; });
+    sec.hidden = n === 0; sec.querySelector(".cat__n").textContent = q ? `${n} sonuç` : `${sec.querySelectorAll("[data-i]").length} ürün`;
+    const rows = sec.querySelector(".rows"); if (rows) rows.hidden = ![...rows.children].some(r => !r.hidden);
+    toplam += n; });
+  $("#bos").hidden = toplam > 0; $("#bosYazi").textContent = `“${ara.value.trim()}” için ürün bulamadık. Başka bir kelime dene.`;
+}
+ara.addEventListener("input", filtrele);
+$("#araAc").addEventListener("click", () => { bar.classList.add("is-search"); ara.focus(); });
+const aramaKapat = () => { ara.value = ""; filtrele(); bar.classList.remove("is-search"); $("#araAc").focus(); };
+$("#araKapat").addEventListener("click", aramaKapat);
+$("#bosTemizle").addEventListener("click", () => { ara.value = ""; filtrele(); ara.focus(); });
+ara.addEventListener("keydown", e => { if (e.key === "Escape") aramaKapat(); if (e.key === "Enter") ara.blur(); });
+
+/* açık / kapalı (Türkiye saati) */
+(function(){
+  const saat = {0:["12:00","00:30"],1:["12:00","02:00"],2:["12:00","02:00"],3:["12:00","02:00"],4:["12:00","02:00"],5:["12:00","02:00"],6:["12:00","02:00"]};
+  const p = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Istanbul",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  const wd = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.find(x=>x.type==="weekday").value];
+  const now = (+p.find(x=>x.type==="hour").value % 24) * 60 + +p.find(x=>x.type==="minute").value;
+  const m = t => { const [h,mm] = t.split(":").map(Number); return h*60+mm; };
+  let acik = false, kap = ""; const b = saat[wd], y = saat[(wd+6)%7];
+  if (b) { const o = m(b[0]); let c = m(b[1]); if (c <= o) c += 1440; if (now >= o && now < c) { acik = true; kap = b[1]; } }
+  if (!acik && y) { const o = m(y[0]), c = m(y[1]); if (c <= o && now < c) { acik = true; kap = y[1]; } }
+  const st = $("#status"), sp = st.querySelector("span");
+  if (acik) sp.textContent = `Şu an açığız, kapanış ${kap}`;
+  else { st.classList.add("closed"); sp.textContent = b && now < m(b[0]) ? `Şu an kapalı, bugün ${b[0]}'de açıyoruz` : "Şu an kapalı"; }
+})();
+</script>
+</body>
+</html>
